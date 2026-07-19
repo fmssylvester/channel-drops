@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sylvester · Channel Drops</title>
+<style>
+  :root{--bg:#07090D;--cyan:#00D9FF;--gold:#E7B84D}
+  *{box-sizing:border-box}
+  body{margin:0;background:radial-gradient(1200px 600px at 70% -10%,#0d1622,var(--bg));
+       color:#e8eef5;font:15px/1.5 -apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;min-height:100vh}
+  header{padding:28px 26px 10px}
+  h1{margin:0;font-size:26px;letter-spacing:.5px;font-family:'Space Grotesk',system-ui,sans-serif}
+  h1 b{color:var(--cyan)} .g{color:var(--gold)}
+  .tag{opacity:.6;font-size:13px;margin-top:4px}
+  .bar{padding:14px 26px;position:sticky;top:0;background:rgba(7,9,13,.85);backdrop-filter:blur(6px);z-index:5}
+  input{width:100%;max-width:640px;padding:11px 14px;border-radius:10px;border:1px solid #1c2733;
+        background:#0b1018;color:#e8eef5;font-size:14px;outline:none}
+  input:focus{border-color:var(--cyan)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px;padding:6px 26px 40px}
+  .card{background:#0b1018;border:1px solid #16202c;border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
+  .meta{padding:12px 14px 14px}
+  .name{font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .sub{opacity:.55;font-size:12px;margin:3px 0 10px}
+  .btn{display:inline-block;padding:7px 12px;border-radius:9px;background:var(--cyan);color:#04121a;
+       font-weight:700;text-decoration:none;font-size:13px}
+  .btn:hover{filter:brightness(1.1)}
+  .empty{opacity:.6;padding:40px 26px;text-align:center}
+  footer{padding:18px 26px 40px;opacity:.4;font-size:12px;text-align:center}
+</style>
+</head>
+<body>
+  <header>
+    <h1><b>Sylvester</b> <span class="g">· Channel Drops</span></h1>
+    <div class="tag">Assets dropped by the channel — models, prompts, images, video. Powered by Cloudflare R2.</div>
+  </header>
+  <div class="bar"><input id="q" placeholder="Filter assets…" oninput="f(this.value)"></div>
+  <div id="grid"><div class="empty">Loading drops…</div></div>
+  <footer>Sylvester's AI Lab</footer>
+<script>
+const ICONS={txt:"📝",md:"📝",json:"🔧",safetensors:"🧠",pt:"🧠",pth:"🧠",gguf:"🧠",zip:"🗜️",pdf:"📄",mp4:"🎬",mov:"🎬",webm:"🎬"};
+function ext(n){return (n.includes(".")?n.split(".").pop():"") .toLowerCase();}
+function human(n){const u=["B","KB","MB","GB","TB"];for(const x of u){if(n<1024)return (x==="B"?n:n.toFixed(1)+" "+x);n/=1024;}return n.toFixed(1)+" PB";}
+function when(s){try{return new Date(s).toLocaleString(undefined,{month:"short",day:"numeric",hour:"2-digit",minute:"2-digit"})}catch(e){return s;}}
+function card(it){
+  const e=ext(it.name), thumb=[ "png","jpg","jpeg","gif","webp"].includes(e);
+  const vid=["mp4","mov","webm"].includes(e);
+  let t="";
+  if(thumb) t=`<a href="${it.url}" target="_blank"><img src="${it.url}" loading="lazy" style="width:100%;height:150px;object-fit:cover"></a>`;
+  else if(vid) t=`<video src="${it.url}" muted playsinline preload="none" style="width:100%;height:150px;object-fit:cover"></video>`;
+  else t=`<div style="height:150px;display:flex;align-items:center;justify-content:center;font-size:48px;opacity:.7">${ICONS[e]||"📦"}</div>`;
+  return `<div class="card">${t}<div class="meta"><div class="name" title="${it.name}">${it.name}</div>`+
+    `<div class="sub">${human(it.size)} · ${when(it.date)}</div>`+
+    `<a class="btn" href="${it.url}" download="${it.name}">Download</a></div></div>`;
+}
+function f(v){v=v.toLowerCase();document.querySelectorAll(".card").forEach(c=>{c.style.display=c.querySelector(".name").textContent.toLowerCase().includes(v)?"":"none";});}
+fetch("drops.json?t="+Date.now()).then(r=>r.json()).then(d=>{
+  d=d||[];const g=document.getElementById("grid");
+  if(!d.length){g.innerHTML='<div class="empty">No drops yet. Send a file or text to Sylvester via <b>/drop</b>.</div>';return;}
+  d.sort((a,b)=>b.date.localeCompare(a.date));
+  g.innerHTML=d.map(card).join("");
+}).catch(e=>{document.getElementById("grid").innerHTML='<div class="empty">Failed to load drops.json</div>';});
+</script>
+</body>
+</html>
