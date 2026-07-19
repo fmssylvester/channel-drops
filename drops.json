@@ -74,5 +74,21 @@
     ],
     "featured": true,
     "type": "file"
+  },
+  {
+    "name": "gen_bloom.png",
+    "key": "drops/1784477228_gen_bloom.png",
+    "size": 208058,
+    "date": "2026-07-19T16:07:09.696083+00:00",
+    "url": "https://a19ab3d0c4ad04a1111d3d2169f1ea33.r2.cloudflarestorage.com/r2-bucket/drops/1784477228_gen_bloom.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=c77cf3379164f7d042927d209868f498%2F20260719%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260719T160709Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=66cf780152b4b8c474d30e3a34064de5ee53837c89ddf44c8780b999fb60cf07",
+    "title": "",
+    "description": "Volumetric gold bloom dissolving into cyan haze on a black field, cinematic anamorphic streak.",
+    "tags": [
+      "prompted",
+      "abstract",
+      "wallpaper"
+    ],
+    "featured": false,
+    "type": "file"
   }
 ]
