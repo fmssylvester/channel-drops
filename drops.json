@@ -1,23 +1,30 @@
 [
   {
+    "name": "1784474707_cinematicportraitprompt.txt",
+    "key": "drops/1784474707_cinematicportraitprompt.txt",
+    "size": 101,
+    "date": "2026-07-19T15:25:08.786000+00:00",
+    "url": "https://a19ab3d0c4ad04a1111d3d2169f1ea33.r2.cloudflarestorage.com/r2-bucket/drops/1784474707_cinematicportraitprompt.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=c77cf3379164f7d042927d209868f498%2F20260719%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260719T152509Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=5ca0cddc40f0e4acb73bcbee6b606f5484beba8ef42a3e81d83f4c21b55cabfd"
+  },
+  {
     "name": "1784474703_sample_neon.png",
     "key": "drops/1784474703_sample_neon.png",
     "size": 20167,
     "date": "2026-07-19T15:25:04.488000+00:00",
-    "url": "https://a19ab3d0c4ad04a1111d3d2169f1ea33.r2.cloudflarestorage.com/r2-bucket/drops/1784474703_sample_neon.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=c77cf3379164f7d042927d209868f498%2F20260719%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260719T152504Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=8eaac85205313b02ae7eb2f16c56c41eb9aa81627c78a3319ede0fe2316ae5f2"
+    "url": "https://a19ab3d0c4ad04a1111d3d2169f1ea33.r2.cloudflarestorage.com/r2-bucket/drops/1784474703_sample_neon.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=c77cf3379164f7d042927d209868f498%2F20260719%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260719T152509Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=d08ab30cc96196cafa8a37a2f65e42174374f70a869378c9f455c0a517b42fdf"
   },
   {
     "name": "1784474698_sample_portrait_gold.png",
     "key": "drops/1784474698_sample_portrait_gold.png",
     "size": 21933,
     "date": "2026-07-19T15:25:00.210000+00:00",
-    "url": "https://a19ab3d0c4ad04a1111d3d2169f1ea33.r2.cloudflarestorage.com/r2-bucket/drops/1784474698_sample_portrait_gold.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=c77cf3379164f7d042927d209868f498%2F20260719%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260719T152504Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=83cdc09957bcb4e6fdc9c3098dfd60305219c7b27059db8faa94452e51e6a824"
+    "url": "https://a19ab3d0c4ad04a1111d3d2169f1ea33.r2.cloudflarestorage.com/r2-bucket/drops/1784474698_sample_portrait_gold.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=c77cf3379164f7d042927d209868f498%2F20260719%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260719T152509Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=f727302aced4d0281444b576942b698bd0bbd352f5526321b2cc8221810a4aaa"
   },
   {
     "name": "1784474690_sample_showcase_cyan.png",
     "key": "drops/1784474690_sample_showcase_cyan.png",
     "size": 22523,
     "date": "2026-07-19T15:24:55.569000+00:00",
-    "url": "https://a19ab3d0c4ad04a1111d3d2169f1ea33.r2.cloudflarestorage.com/r2-bucket/drops/1784474690_sample_showcase_cyan.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=c77cf3379164f7d042927d209868f498%2F20260719%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260719T152504Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=62b95d49face8840cf75b78776ed3ab02b1ed9f7ed3b33c70beee5b30430089d"
+    "url": "https://a19ab3d0c4ad04a1111d3d2169f1ea33.r2.cloudflarestorage.com/r2-bucket/drops/1784474690_sample_showcase_cyan.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=c77cf3379164f7d042927d209868f498%2F20260719%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260719T152509Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=2ed2bcb441d41f8c0e40c6c01f32856b593a15634b6e692d689abc02e702f411"
   }
 ]
