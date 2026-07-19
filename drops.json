@@ -106,5 +106,21 @@
     ],
     "featured": true,
     "type": "text"
+  },
+  {
+    "name": "Creature",
+    "key": "drops/1784499759_creature.txt",
+    "size": 139,
+    "date": "2026-07-19T22:22:40.672683+00:00",
+    "url": "https://a19ab3d0c4ad04a1111d3d2169f1ea33.r2.cloudflarestorage.com/r2-bucket/drops/1784499759_creature.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=c77cf3379164f7d042927d209868f498%2F20260719%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260719T222240Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=8f6d1afa615442b7bf391def6ebfd01d2b8ca695cbfa4200a927227b018f52de",
+    "title": "Creature",
+    "description": "majestic frost dragon coiled atop a glacier, intricate ice scales, epic lighting, volumetric blizzard, fantasy concept art, highly detailed",
+    "tags": [
+      "prompted",
+      "sdxl",
+      "creature"
+    ],
+    "featured": true,
+    "type": "text"
   }
 ]
