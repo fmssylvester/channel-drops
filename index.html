@@ -117,6 +117,10 @@
   .card:hover .ov{opacity:1}
   .card .ov .dl{margin-left:auto;background:var(--cyan);color:#04121a;padding:8px 12px;border-radius:9px;font-weight:700;font-size:12px}
   .card .ov .tg{font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:var(--cyan)}
+  .cap-prompt{padding:10px 13px;font-size:12px;line-height:1.45;color:var(--muted);
+    border-top:1px solid var(--line);background:rgba(7,9,13,.5);
+    display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  .cap-prompt b{color:var(--cyan);font-weight:600}
   .empty{padding:60px;text-align:center;color:var(--muted)}
 
   .lb{position:fixed;inset:0;z-index:60;background:rgba(3,5,8,.86);backdrop-filter:blur(8px);
@@ -132,6 +136,9 @@
   .lb-tags .t{font-size:11px;letter-spacing:.5px;text-transform:uppercase;padding:4px 10px;border-radius:999px;
     background:rgba(231,184,77,.14);color:var(--gold);border:1px solid rgba(231,184,77,.25)}
   .lb-desc{color:var(--muted);font-size:14px;white-space:pre-wrap;line-height:1.6}
+  .lb-prompt{background:rgba(0,217,255,.06);border:1px solid var(--line);border-left:3px solid var(--cyan);
+    border-radius:10px;padding:12px 14px;white-space:pre-wrap;line-height:1.6;font-size:14px;color:var(--txt)}
+  .lb-prompt .lbl{display:block;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--cyan);margin-bottom:6px}
   .lb-meta{display:flex;gap:18px;color:var(--muted);font-size:13px;flex-wrap:wrap}
   .lb-actions{display:flex;gap:12px;flex-wrap:wrap}
   .lb-close{position:absolute;top:18px;right:22px;font-size:30px;color:var(--txt);cursor:pointer;z-index:2;
@@ -210,6 +217,7 @@
       <h3 id="lbName"></h3>
       <div class="lb-tags" id="lbTags"></div>
       <div class="lb-desc" id="lbDesc"></div>
+      <div class="lb-prompt" id="lbPrompt" style="display:none"><span class="lbl">Prompt</span><span id="lbPromptText"></span></div>
       <div class="lb-meta" id="lbMeta"></div>
       <div class="lb-actions">
         <a class="btn btn-primary" id="lbDl" download>Download</a>
@@ -254,8 +262,9 @@ function displayName(x){return x.title&&x.title.trim()?x.title.trim():(x.name||"
 
 function buildPills(){
   const cats=["all",...new Set(DATA.map(x=>cat(ext(x.name))))];
+  if(DATA.some(x=>cat(ext(x.name))==="img"&&(x.prompt||x.description)))cats.push("prompted");
   $("catPills").innerHTML=cats.map(c=>
-    `<div class="pill ${c==='all'?'on':''}" data-k="cat" data-v="${c}" onclick="setPill(this)">${c==='all'?'All':(CAT[c]||c)}</div>`).join("");
+    `<div class="pill ${c==='all'?'on':''}" data-k="cat" data-v="${c}" onclick="setPill(this)">${c==='all'?'All':(c==='prompted'?'Prompted':(CAT[c]||c))}</div>`).join("");
   const tags=[...new Set(DATA.flatMap(x=>x.tags||[]))].sort();
   $("tagPills").innerHTML=tags.map(t=>
     `<div class="pill" data-k="tag" data-v="${esc(t)}" onclick="setPill(this)">#${esc(t)}</div>`).join("");
@@ -269,9 +278,11 @@ function filtered(){
   const q=$("q").value.trim().toLowerCase();
   const s=$("sort").value;
   let list=DATA.filter(x=>{
-    if(ACTIVE.cat!=="all"&&cat(ext(x.name))!==ACTIVE.cat)return false;
+    const e=ext(x.name),c=cat(e);
+    if(ACTIVE.cat==="prompted"){if(!(c==="img"&&(x.prompt||x.description)))return false;}
+    else if(ACTIVE.cat!=="all"&&c!==ACTIVE.cat)return false;
     if(ACTIVE.tag&&!(x.tags||[]).map(t=>t.toLowerCase()).includes(ACTIVE.tag.toLowerCase()))return false;
-    if(q){const hay=(displayName(x)+" "+(x.tags||[]).join(" ")+" "+(x.description||"")+" "+(x.name||"")).toLowerCase();
+    if(q){const hay=(displayName(x)+" "+(x.tags||[]).join(" ")+" "+(x.description||"")+" "+(x.prompt||"")+" "+(x.name||"")).toLowerCase();
       if(!hay.includes(q))return false;}
     return true;
   });
@@ -288,8 +299,11 @@ function render(){
       :VID.includes(e)?`<video src="${it.url}" muted preload="none"></video>`
       :`<div class="ic">${ICON[c]||"📦"}</div>`;
     const tg=(it.tags||[]).slice(0,3).map(t=>`<span class="tg">#${esc(t)}</span>`).join(" ");
+    const prompted=(c==="img"&&(it.prompt||it.description));
+    const pr=prompted?`<div class="cap-prompt"><b>Prompt ·</b> ${esc(it.prompt||it.description)}</div>`:"";
     return `<div class="card" onclick="openLb(${LIST.indexOf(it)})">
       <div class="thumb">${thumb}</div>
+      ${pr}
       <div class="info"><div class="nm" title="${esc(displayName(it))}">${esc(displayName(it))}</div><div class="sz">${human(it.size)}</div></div>
       <div class="ov"><span class="tg">${tg||CAT[c]||c}</span><span class="dl">View</span></div>
     </div>`;
@@ -304,8 +318,9 @@ function renderFeatured(){
   $("slides").innerHTML=arr.map((it,i)=>{
     const e=ext(it.name),c=cat(e);
     const m=IMG.includes(e)?`<img src="${it.url}" alt="">`:VID.includes(e)?`<video src="${it.url}" muted autoplay loop preload="metadata"></video>`:`<div class="ic" style="font-size:80px">${ICON[c]||"📦"}</div>`;
+    const pr=(IMG.includes(e)&&(it.prompt||it.description))?`<div class="meta" style="max-width:60ch;white-space:normal">${esc(it.prompt||it.description)}</div>`:"";
     return `<div class="slide"><div class="media">${m}</div>
-      <div class="cap"><div><div class="t">${esc(displayName(it))}</div><div class="meta">${human(it.size)} · ${when(it.date)}</div></div>
+      <div class="cap"><div><div class="t">${esc(displayName(it))}</div><div class="meta">${human(it.size)} · ${when(it.date)}</div>${pr}</div>
       <button class="btn btn-primary" onclick="openFrom(FEAT,${i})">View ↗</button></div></div>`;
   }).join("");
   $("dots").innerHTML=arr.map((_,i)=>`<div class="d ${i===0?'on':''}" onclick="go(${i})"></div>`).join("");
@@ -327,6 +342,8 @@ function showLb(){
   $("lbName").textContent=displayName(it);
   $("lbTags").innerHTML=(it.tags||[]).map(t=>`<span class="t">#${esc(t)}</span>`).join("");
   $("lbDesc").textContent=it.description||"";
+  if(it.prompt){$("lbPrompt").style.display="block";$("lbPromptText").textContent=it.prompt;}
+  else{$("lbPrompt").style.display="none";}
   $("lbMeta").innerHTML=`<span>${CAT[c]||c}</span><span>${human(it.size)}</span><span>${when(it.date)}</span>`;
   $("lbDl").href=it.url;$("lbDl").download=it.name||"asset";
   $("lb").classList.add("open");document.body.style.overflow="hidden";
