@@ -28,70 +28,6 @@
     "url": "https://a19ab3d0c4ad04a1111d3d2169f1ea33.r2.cloudflarestorage.com/r2-bucket/drops/1784474690_sample_showcase_cyan.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=c77cf3379164f7d042927d209868f498%2F20260719%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260719T152509Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=2ed2bcb441d41f8c0e40c6c01f32856b593a15634b6e692d689abc02e702f411"
   },
   {
-    "name": "gen_synthwave.png",
-    "key": "drops/1784477208_gen_synthwave.png",
-    "size": 48722,
-    "date": "2026-07-19T16:06:53.045976+00:00",
-    "url": "https://a19ab3d0c4ad04a1111d3d2169f1ea33.r2.cloudflarestorage.com/r2-bucket/drops/1784477208_gen_synthwave.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=c77cf3379164f7d042927d209868f498%2F20260719%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260719T160653Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=06d6c510777df2a3988c0a56ffeadce80365817e956ca2b8d47bdb254bf989db",
-    "title": "",
-    "description": "Synthwave grid horizon at dusk \u2014 magenta sun with scanline cuts, neon perspective floor, volumetric haze.",
-    "tags": [
-      "prompted",
-      "synthwave",
-      "wallpaper"
-    ],
-    "featured": true,
-    "type": "file"
-  },
-  {
-    "name": "gen_flow.png",
-    "key": "drops/1784477217_gen_flow.png",
-    "size": 319235,
-    "date": "2026-07-19T16:06:58.685448+00:00",
-    "url": "https://a19ab3d0c4ad04a1111d3d2169f1ea33.r2.cloudflarestorage.com/r2-bucket/drops/1784477217_gen_flow.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=c77cf3379164f7d042927d209868f498%2F20260719%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260719T160658Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=3104bb7351b964a596b392369150be92f26478824748d76fb3743595f014a39e",
-    "title": "",
-    "description": "Cyan-to-gold flow field over near-black, thousands of interpolating curves, 8k abstract wallpaper.",
-    "tags": [
-      "prompted",
-      "abstract",
-      "wallpaper"
-    ],
-    "featured": false,
-    "type": "file"
-  },
-  {
-    "name": "gen_chrome.png",
-    "key": "drops/1784477222_gen_chrome.png",
-    "size": 69148,
-    "date": "2026-07-19T16:07:04.223753+00:00",
-    "url": "https://a19ab3d0c4ad04a1111d3d2169f1ea33.r2.cloudflarestorage.com/r2-bucket/drops/1784477222_gen_chrome.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=c77cf3379164f7d042927d209868f498%2F20260719%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260719T160704Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=1be41ce5ec958c2d57dfc2e884f6415c715f229c88e559f309ae6ea797a3921e",
-    "title": "",
-    "description": "Iridescent chrome sphere with a cyan rim light on a dark studio sweep, soft specular bloom.",
-    "tags": [
-      "prompted",
-      "render",
-      "wallpaper"
-    ],
-    "featured": true,
-    "type": "file"
-  },
-  {
-    "name": "gen_bloom.png",
-    "key": "drops/1784477228_gen_bloom.png",
-    "size": 208058,
-    "date": "2026-07-19T16:07:09.696083+00:00",
-    "url": "https://a19ab3d0c4ad04a1111d3d2169f1ea33.r2.cloudflarestorage.com/r2-bucket/drops/1784477228_gen_bloom.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=c77cf3379164f7d042927d209868f498%2F20260719%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260719T160709Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=66cf780152b4b8c474d30e3a34064de5ee53837c89ddf44c8780b999fb60cf07",
-    "title": "",
-    "description": "Volumetric gold bloom dissolving into cyan haze on a black field, cinematic anamorphic streak.",
-    "tags": [
-      "prompted",
-      "abstract",
-      "wallpaper"
-    ],
-    "featured": false,
-    "type": "file"
-  },
-  {
     "name": "Portrait",
     "key": "drops/1784499753_portrait.txt",
     "size": 165,
@@ -186,5 +122,101 @@
     ],
     "featured": false,
     "type": "text"
+  },
+  {
+    "name": "portrait_00.png",
+    "key": "drops/1784499922_portrait_00.png",
+    "size": 1556380,
+    "date": "2026-07-19T22:25:25.633584+00:00",
+    "url": "https://a19ab3d0c4ad04a1111d3d2169f1ea33.r2.cloudflarestorage.com/r2-bucket/drops/1784499922_portrait_00.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=c77cf3379164f7d042927d209868f498%2F20260719%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260719T222525Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=7c29e4a4969425cd593e1ef4180227a4f62e27d3da311ae726cf622e970e4bd2",
+    "title": "Portrait",
+    "description": "cinematic portrait of an elderly sailor with weathered skin and a knitted cap, dramatic rim light, shallow depth of field, highly detailed, 35mm film photography, 8k",
+    "tags": [
+      "prompted",
+      "sdxl",
+      "portrait"
+    ],
+    "featured": true,
+    "type": "file"
+  },
+  {
+    "name": "creature_01.png",
+    "key": "drops/1784499925_creature_01.png",
+    "size": 1895604,
+    "date": "2026-07-19T22:25:27.681659+00:00",
+    "url": "https://a19ab3d0c4ad04a1111d3d2169f1ea33.r2.cloudflarestorage.com/r2-bucket/drops/1784499925_creature_01.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=c77cf3379164f7d042927d209868f498%2F20260719%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260719T222527Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=29685d76d2038e6722c762464cd2361c0da7dc1f33c8a26f04fdfbc1a54c2956",
+    "title": "Creature",
+    "description": "majestic frost dragon coiled atop a glacier, intricate ice scales, epic lighting, volumetric blizzard, fantasy concept art, highly detailed",
+    "tags": [
+      "prompted",
+      "sdxl",
+      "creature"
+    ],
+    "featured": true,
+    "type": "file"
+  },
+  {
+    "name": "product_02.png",
+    "key": "drops/1784499927_product_02.png",
+    "size": 1235493,
+    "date": "2026-07-19T22:25:29.541575+00:00",
+    "url": "https://a19ab3d0c4ad04a1111d3d2169f1ea33.r2.cloudflarestorage.com/r2-bucket/drops/1784499927_product_02.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=c77cf3379164f7d042927d209868f498%2F20260719%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260719T222529Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=54fd3e9042aac5b8139093cdb88f2ad722357c5c2b3ec8886748bf23eb3356f5",
+    "title": "Product",
+    "description": "floating chrome wristwatch product shot, dramatic studio lighting, reflections, ultra clean background, photorealistic, 8k",
+    "tags": [
+      "prompted",
+      "sdxl",
+      "product"
+    ],
+    "featured": false,
+    "type": "file"
+  },
+  {
+    "name": "architecture_03.png",
+    "key": "drops/1784499929_architecture_03.png",
+    "size": 1466697,
+    "date": "2026-07-19T22:25:31.792852+00:00",
+    "url": "https://a19ab3d0c4ad04a1111d3d2169f1ea33.r2.cloudflarestorage.com/r2-bucket/drops/1784499929_architecture_03.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=c77cf3379164f7d042927d209868f498%2F20260719%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260719T222531Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=5b2cd12eb21d1cc9785109df966c507090eb39723bdaa48efc509eaa31765371",
+    "title": "Architecture",
+    "description": "brutalist concrete cathedral at golden hour, long shadows, minimal composition, architectural photography, highly detailed",
+    "tags": [
+      "prompted",
+      "sdxl",
+      "architecture"
+    ],
+    "featured": false,
+    "type": "file"
+  },
+  {
+    "name": "neon_04.png",
+    "key": "drops/1784499931_neon_04.png",
+    "size": 1667958,
+    "date": "2026-07-19T22:25:34.042873+00:00",
+    "url": "https://a19ab3d0c4ad04a1111d3d2169f1ea33.r2.cloudflarestorage.com/r2-bucket/drops/1784499931_neon_04.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=c77cf3379164f7d042927d209868f498%2F20260719%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260719T222534Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=47603123fc5ef1cae69d3f8459428d270b386746d75dd29de4c2e4691035dcd3",
+    "title": "Neon",
+    "description": "futuristic neon city street at night, rain-slicked pavement, cyberpunk signage, bokeh, cinematic, highly detailed",
+    "tags": [
+      "prompted",
+      "sdxl",
+      "neon"
+    ],
+    "featured": false,
+    "type": "file"
+  },
+  {
+    "name": "landscape_05.png",
+    "key": "drops/1784499934_landscape_05.png",
+    "size": 1016495,
+    "date": "2026-07-19T22:25:36.078491+00:00",
+    "url": "https://a19ab3d0c4ad04a1111d3d2169f1ea33.r2.cloudflarestorage.com/r2-bucket/drops/1784499934_landscape_05.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=c77cf3379164f7d042927d209868f498%2F20260719%2Fauto%2Fs3%2Faws4_request&X-Amz-Date=20260719T222536Z&X-Amz-Expires=604800&X-Amz-SignedHeaders=host&X-Amz-Signature=ede4c168bfae64e819d16942eee751dcd363d4680b2913499df979e832ede775",
+    "title": "Landscape",
+    "description": "serene misty mountain lake at dawn, soft pastel sky, mirror reflection, meditative landscape, cinematic, 8k",
+    "tags": [
+      "prompted",
+      "sdxl",
+      "landscape"
+    ],
+    "featured": false,
+    "type": "file"
   }
 ]
